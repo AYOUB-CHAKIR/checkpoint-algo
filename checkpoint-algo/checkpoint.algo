@@ -1,0 +1,43 @@
+Algorithme AnalyserPhrase
+    Variables
+        phrase : chaîne de caractères
+        caractere : caractère
+        estMotEnCours : booléen
+        nbMots : entier
+        nbCaracteres : entier
+        typePhrase : chaîne de caractères
+
+    Début
+        écrire "Veuillez saisir une phrase se terminant par un point : "
+        lire phrase
+
+        nbMots <- 0
+        nbCaracteres <- longueur(phrase)
+        typePhrase <- ""
+
+        Pour chaque caractere dans phrase faire
+            Si caractere est une lettre ou un chiffre Alors
+                Si estMotEnCours est faux Alors
+                    nbMots <- nbMots + 1
+                    estMotEnCours <- vrai
+                Fin Si
+            Sinon
+                estMotEnCours <- faux
+            Fin Si
+
+            Si caractere est un point Alors
+                Si caractere est le dernier caractère de phrase Alors
+                    Si typePhrase est vide Alors
+                        typePhrase <- "Déclarative"
+                    Fin Si
+                Sinon
+                    typePhrase <- "Interrogative"
+                Fin Si
+            Fin Si
+        Fin Pour
+
+        écrire "Le nombre de mots dans la phrase est : ", nbMots
+        écrire "Le nombre de caractères dans la phrase est : ", nbCaracteres
+        écrire "Le type de la phrase est : ", typePhrase
+    Fin
+Fin Algorithme
