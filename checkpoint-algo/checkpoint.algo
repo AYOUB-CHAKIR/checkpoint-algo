@@ -14,23 +14,20 @@ Algorithme AnalyserPhrase
         nbrcar <- 0;
         nbrvoyelle <-0;
 
-        Pour (i=0 i<nbrcar i++) 
+        Pour (i=0 i<phrase.length i++) 
             faire
             nbrcar <= nbrcar++;
 
-            Si (i= ' ') 
+            Si phrase[i]= ' '
             nbrmots <= nbrmots++;
 
-                sinon si (i=a ou i=e ou i=i ou i=o);
+            si phrase[i]= 'a' ou phrase[i]= 'e' ou phrase[i]= 'i' ou phrase[i]= 'o';
                 nbrvoyelle<= nbrvoyelle++;
 
-                sinon si (i='.')
-
-            fin si 
         fin pour
 
         écrire: ("Le nombre de mots dans la phrase est :" +nbMots);
-        écrire ("Le nombre de caractères dans la phrase est :" +nbrcar);
+        écrire ("Le nombre de caractères dans la phrase est :" +nbrcar-1);
         écrire ("Le nombre de voyelles dans la phrase est :" +nbrvoyelle);
     Fin
 
