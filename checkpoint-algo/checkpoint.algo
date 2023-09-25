@@ -20,9 +20,11 @@ Algorithme AnalyserPhrase
 
             Si phrase[i]= ' '
             nbrmots <= nbrmots++;
+            fin si
 
-            si phrase[i]= 'a' ou phrase[i]= 'e' ou phrase[i]= 'i' ou phrase[i]= 'o';
+            si phrase[i]= 'a' ou phrase[i]= 'e' ou phrase[i]= 'i' ou phrase[i]= 'o' phrase[i]= 'u';
                 nbrvoyelle<= nbrvoyelle++;
+            fin si
 
         fin pour
 
