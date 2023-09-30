@@ -1,0 +1,14 @@
+Algorithme:"tridecartre";
+declaration:
+    var:
+        arr[]:reel;
+        i,j:reel;
+    
+debut
+    for (i=0, i<=arr.length, i++)
+        j= arr[i+1];
+            if arr[i] > j;
+                j = arr[i];
+            end if
+    end for
+    
