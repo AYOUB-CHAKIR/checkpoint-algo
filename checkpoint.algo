@@ -1,0 +1,35 @@
+Algorithme AnalyserPhrase
+    declaration:
+    Var
+        phrase : chaîne de caractères
+        nbrcar : entiere;
+        nbrmots : entier;
+        nbrvoyelle : entier;
+
+    Début
+        écrire: "saisir une phrase se terminant par un point : ";
+        lire: "phrase";
+
+        nbMots <- 0;
+        nbrcar <- 0;
+        nbrvoyelle <-0;
+
+        Pour (i=0 i<phrase.length i++) 
+            faire
+            nbrcar <= nbrcar++;
+
+            Si phrase[i]= ' '
+            nbrmots <= nbrmots++;
+            fin si
+
+            si phrase[i]= 'a' ou phrase[i]= 'e' ou phrase[i]= 'i' ou phrase[i]= 'o' phrase[i]= 'u';
+                nbrvoyelle<= nbrvoyelle++;
+            fin si
+
+        fin pour
+
+        écrire: ("Le nombre de mots dans la phrase est :" +nbMots);
+        écrire ("Le nombre de caractères dans la phrase est :" +nbrcar-1);
+        écrire ("Le nombre de voyelles dans la phrase est :" +nbrvoyelle);
+    Fin
+
