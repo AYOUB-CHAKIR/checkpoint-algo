@@ -1,20 +1,11 @@
-Algorithme:"palindrom";
-declaration:
-    var:
-        mot[]:string;
-        i: entier;
-
-debut:
-
-    for (i=0, i<=mot.length-1-i){
-        if (i=mot.length-1-i et mot[i]=mot[mot.length-1-i])
-            console.log(mot" est un palindrome");
-            else if (mot[i]!=mot[mot.length-1-i]);
-            console.log(mot" n'est pas un palindrome");
-            end else if
-        end if
-        
-    end for
-        
-    }
-    
+ALGORITHME EstPalindrome(mot)
+    SI LONGUEUR(mot) <= 1 ALORS
+        RETOURNER VRAI  // Un mot vide ou d'une seule lettre est un palindrome
+    SINON
+        SI PREMIÈRE_LETTRE(mot) = DERNIÈRE_LETTRE(mot) ALORS
+            RETOURNER EstPalindrome(SOUS_MOT(mot, 2, LONGUEUR(mot) - 2))
+        SINON
+            RETOURNER FAUX
+        FIN SI
+    FIN SI
+FIN ALGORITHME
